@@ -1,0 +1,17 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.9.3",
+    "give-me-a-joke": "^0.5.1",
+    "install": "^0.13.0",
+    "npm": "^11.6.2"
+  }
+}
