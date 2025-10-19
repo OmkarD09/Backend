@@ -25,6 +25,40 @@ app.get('/status', (req, res) => {
     });
 });
 
+app.get('/echo', (req, res) => {
+    const queryParams = req.query;
+    res.send({
+        message: 'Echoing query parameters',
+        query: queryParams
+    });
+});
+
+app.get('/user/:id', (req, res) => {
+    const userId = req.params.id;
+    res.send({
+        message: `User ID: ${userId}`
+    });
+});
+
+
+app.get("/:username/:id", (req, res) => {
+
+    const { username, id } = req.params;
+    res.send({
+        message: `Username: ${username}, ID: ${id}`
+    });
+});
+
+app.get("/search", (req, res) => {
+    let {q} = req.query;  
+    if (!q) {
+        res.send("<h1>No search query provided</h1>");
+    }
+    res.send(`<h1>Searching for: ${q}</h1>`);
+
+
+});
+
 // Catch-all 404 handler for any request that doesn't match a route
 app.use((req, res) => {
     res.status(404).send({ message: "Route not found" });
