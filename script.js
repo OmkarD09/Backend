@@ -16,5 +16,5 @@ for (let i = 2; i < args.length; i++) {
 
 //
 
-let info = require('./fruits');
+let info = require('./Fruits');
 console.log(info);
