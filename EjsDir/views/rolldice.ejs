@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The Random number is <%= randomNumber %></h2>
+    <% if (randomNumber === 6) { %>
+        <h2>Congratulations! You rolled a six!</h2>
+    <% } else { %>
+        <h2>Sorry, you didn't roll a six. Try again!</h2>
+    <% } %>
+</body>
+</html>
