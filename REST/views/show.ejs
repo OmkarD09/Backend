@@ -9,8 +9,13 @@
 <body>
     <h1>Post Details</h1>
     <div class="post">
+        <p>Post ID: <%= post.id %></p>
         <h3 class="user">@<%= post.username %></h3>
         <p class="content"><%= post.content %></p>
+        <a href="/posts/<%= post.id %>/edit">Edit</a> |
+        <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
     </div>
 </body>
 </html>
