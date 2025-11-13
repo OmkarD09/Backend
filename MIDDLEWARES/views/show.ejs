@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Details</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f2f5; padding: 20px; }
+        .chat-container { background-color: #fff; border-radius: 8px; padding: 20px; max-width: 500px; margin: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .chat-header { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .chat-header p { margin: 0; color: #666; }
+        .chat-message { background-color: #e9e9eb; padding: 15px; border-radius: 8px; }
+        .actions { margin-top: 20px; }
+        a, button { text-decoration: none; padding: 8px 12px; border-radius: 5px; border: none; cursor: pointer; }
+        .edit-btn { background-color: #007bff; color: white; }
+        .delete-form button { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h3>Chat Details</h3>
+        <div class="chat-header">
+            <p><b>From:</b> <%= chat.from %></p>
+            <p><b>To:</b> <%= chat.to %></p>
+        </div>
+        <p class="chat-message"><%= chat.message %></p>
+        <p><i>Received at: <%= chat.created_at.toString().split(" ")[4] %> on <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></i></p>
+        <hr>
+        <div class="actions">
+            <a href="/chats/<%= chat._id %>/edit" class="edit-btn">Edit this Chat</a>
+            <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE" style="display: inline;">
+                <button>Delete this Chat</button>
+            </form>
+        </div>
+        <br>
+        <a href="/chats">Back to all chats</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
