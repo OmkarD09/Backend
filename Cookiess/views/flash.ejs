@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Messages</title>
+</head>
+<body>
+    <h2>Hello </h2>
+    <% if (success) { %>
+        <div style="color: green;"><%= success %> name:<%= name %></div>
+    <% } %>
+    <% if (error) { %>
+        <div style="color: red;"><%= error %></div>
+    <% } %>
+</body>
+</html>
